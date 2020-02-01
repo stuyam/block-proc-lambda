@@ -1,0 +1,7 @@
+:not(pre) > code[class*="language-"], pre[class*="language-"] {
+  background: hsla(219, 24%, 20%, 1);
+}
+
+hr {
+  border-color: hsla(219, 24%, 17%, 1);
+}
