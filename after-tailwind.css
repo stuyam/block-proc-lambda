@@ -9,3 +9,7 @@ pre[class*="language-"] {
 hr {
   border-color: hsla(219, 24%, 17%, 1);
 }
+
+.bg-gray-900 {
+  background-color: hsla(219, 24%, 20%, 1) !important;
+}

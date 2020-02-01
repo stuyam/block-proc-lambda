@@ -28,33 +28,58 @@
     <p>
       The definitive guide to blocks, procs, and lambdas in Ruby. There are a minor differences between all of them. By making this I hope to learn all of those differences and teach them at the same times.
     </p>
+    <div class="mt-4 mb-2">Table of Contents</div>
+    <div class="bg-gray-900 rounded p-4">
+      <a href="#type">Type</a>
+      <span class="mx-2">•</span>
+      <a href="#syntax">Syntax</a>
+      <span class="mx-2">•</span>
+      <a href="#definition">Definition</a>
+      <span class="mx-2">•</span>
+      <a href="#implicit-call">Implicit Call</a>
+      <span class="mx-2">•</span>
+      <a href="#explicit-call">Explicit Call</a>
+<!--       <span class="mx-2">•</span>
+      <a href="#type">Type</a>
+      <span class="mx-2">•</span>
+      <a href="#type">Type</a>
+      <span class="mx-2">•</span>
+      <a href="#type">Type</a>
+      <span class="mx-2">•</span>
+      <a href="#type">Type</a>
+      <span class="mx-2">•</span>
+      <a href="#type">Type</a> -->
+    </div>
 
-    <hr class="my-10">
+    <hr class="mt-10">
 
-    <h3 class="text-2xl italic mb-4">Type</h3>
-    <div class="icon-block icon-sm"></div>
-    <p>Not Object</p>
-    <div class="icon-proc icon-sm mt-8"></div>
-    <p>Object - class Proc</p>
-    <div class="icon-lambda icon-sm mt-8"></div>
-    <p>Object - class Proc</p>
+    <a name="type" class="block py-10">
+      <h3 class="text-2xl italic mb-4">Type</h3>
+      <div class="icon-block icon-sm"></div>
+      <p>Not Object</p>
+      <div class="icon-proc icon-sm mt-8"></div>
+      <p>Object - class Proc</p>
+      <div class="icon-lambda icon-sm mt-8"></div>
+      <p>Object - class Proc</p>
+    </a>
 
-    <hr class="my-10">
+    <hr>
 
-    <h3 class="text-2xl italic mb-4">Syntax</h3>
-    The syntax for defining an group of code to be executed later is the same for blocks, procs, and lambdas.
-    <br>
-    Single line syntax:
-    <pre><code class="language-ruby">
+    <a name="syntax" class="block py-10">
+      <h3 class="text-2xl italic mb-4">Syntax</h3>
+      The syntax for defining an group of code to be executed later is the same for blocks, procs, and lambdas.
+      <br>
+      Single line syntax:
+      <pre><code class="language-ruby">
 # basic example
 { puts 'I made it here' }
 
 # example with params
 { |user| puts "say hi #{user.name}" }
-    </code></pre>
+      </code></pre>
 
-    Multi line syntax:
-    <pre><code class="language-ruby">
+      Multi line syntax:
+      <pre><code class="language-ruby">
 # basic example
 do
   puts 'I made it here'
@@ -64,60 +89,41 @@ end
 do |user|
   puts "say hi #{user.name}"
 end
-    </code></pre>
+      </code></pre>
+    </a>
 
-    <hr class="my-10">
+    <hr>
 
-    <h3 class="text-2xl italic mb-4">Definition</h3>
-    <div class="icon-block icon-sm"></div>
-    <p>A block can only be defined while calling a method.</p>
-    <pre><code class="language-ruby">
+    <a name="definition" class="block py-10">
+      <h3 class="text-2xl italic mb-4">Definition</h3>
+      <div class="icon-block icon-sm"></div>
+      <p>A block can only be defined while calling a method.</p>
+      <pre><code class="language-ruby">
 some_method do
   puts 'these are the contents of a block'
 end
-    </code></pre>
-    <div class="icon-proc icon-sm mt-8"></div>
-    <p>A proc can be defined by newing up the Proc class or using the Kernal#proc method.</p>
-    <pre><code class="language-ruby">
+      </code></pre>
+      <div class="icon-proc icon-sm mt-8"></div>
+      <p>A proc can be defined by newing up the Proc class or using the Kernal#proc method.</p>
+      <pre><code class="language-ruby">
 proc_1 = Proc.new { 'Hello World'}
 proc_2 = proc { 'Hello World'}
-    </code></pre>
-    <div class="icon-lambda icon-sm mt-8"></div>
-    <p>A lambda can be defined by using the -> syntax or using the Kernal#lambda method.</p>
-    <pre><code class="language-ruby">
+      </code></pre>
+      <div class="icon-lambda icon-sm mt-8"></div>
+      <p>A lambda can be defined by using the -> syntax or using the Kernal#lambda method.</p>
+      <pre><code class="language-ruby">
 lambda_1 = ->{ 'Hello World'}
 lambda_2 = lambda { 'Hello World'}
-    </code></pre>
+      </code></pre>
+    </a>
 
-    <hr class="my-10">
+    <hr>
 
-    <h3 class="text-2xl italic mb-4">Converting</h3>
-    <div class="icon-block icon-sm"></div>
-    <p>A block can only be defined while calling a method.</p>
-    <pre><code class="language-ruby">
-some_method do
-  puts 'these are the contents of a block'
-end
-    </code></pre>
-    <div class="icon-proc icon-sm mt-8"></div>
-    <p>A proc can be defined by newing up the Proc class or using the Kernal#proc method.</p>
-    <pre><code class="language-ruby">
-proc_1 = Proc.new { 'Hello World'}
-proc_2 = proc { 'Hello World'}
-    </code></pre>
-    <div class="icon-lambda icon-sm mt-8"></div>
-    <p>A lambda can be defined by using the -> syntax or using the Kernal#lambda method.</p>
-    <pre><code class="language-ruby">
-lambda_1 = ->{ 'Hello World'}
-lambda_2 = lambda { 'Hello World'}
-    </code></pre>
-
-    <hr class="my-10">
-
-    <h3 class="text-2xl italic mb-4">Implicit Call</h3>
-    <div class="icon-block icon-sm"></div>
-    <p>A block can be called implicitly with the "yield" keyword without an explicit argument in the method declaration.</p>
-    <pre><code class="language-ruby">
+    <a name="implicit-call" class="block py-10">
+      <h3 class="text-2xl italic mb-4">Implicit Call</h3>
+      <div class="icon-block icon-sm"></div>
+      <p>A block can be called implicitly with the "yield" keyword without an explicit argument in the method declaration.</p>
+      <pre><code class="language-ruby">
 def some_method
   yield
 end
@@ -125,10 +131,10 @@ end
 some_method do
   puts 'these are the contents of a block'
 end
-    </code></pre>
-    <div class="icon-proc icon-sm mt-8"></div>
-    <p>To user a proc implicitly, you can pass the last argument of the method in with a special & syntax to convert to proc to a block.</p>
-    <pre><code class="language-ruby">
+      </code></pre>
+      <div class="icon-proc icon-sm mt-8"></div>
+      <p>To user a proc implicitly, you can pass the last argument of the method in with a special "&" syntax to convert to proc to a block.</p>
+      <pre><code class="language-ruby">
 def some_method
   yield
 end
@@ -136,10 +142,10 @@ end
 p = proc { puts 'convert this proc to a block!'}
 
 some_method(&p)
-    </code></pre>
-    <div class="icon-lambda icon-sm mt-8"></div>
-    <p>Since a lambda is a proc, it works the same as above!</p>
-    <pre><code class="language-ruby">
+      </code></pre>
+      <div class="icon-lambda icon-sm mt-8"></div>
+      <p>Since a lambda is a proc, it works the same as above!</p>
+      <pre><code class="language-ruby">
 def some_method
   yield
 end
@@ -147,32 +153,35 @@ end
 lamb = ->{ puts 'convert this lambda to a block!'}
 
 some_method(&lamb)
-    </code></pre>
+      </code></pre>
+    </a>
 
-    <hr class="my-10">
+    <hr>
 
-    <h3 class="text-2xl italic mb-4">Explicit Call</h3>
-    <div class="icon-block icon-sm"></div>
-    <p>A block can be called explicitly by using "&block" syntax. The "&" calls "to_proc" on the "block" variable and converts it to a proc. That makes it an object and gives it the "call" method to call the proc.</p>
-    <pre><code class="language-ruby">
+    <a name="explicit-call" class="block py-10">
+      <h3 class="text-2xl italic mb-4">Explicit Call</h3>
+      <div class="icon-block icon-sm"></div>
+      <p>A block can be called explicitly by using "&block" syntax. The "&" calls "to_proc" on the "block" variable and converts it to a proc. That makes it an object and gives it the "call" method to call the proc.</p>
+      <pre><code class="language-ruby">
 def some_method(&block)
   block.call
 end
-    </code></pre>
-    <div class="icon-proc icon-sm mt-8"></div>
-    <p>Procs have a "call" method that you use to call the method.</p>
-    <pre><code class="language-ruby">
+      </code></pre>
+      <div class="icon-proc icon-sm mt-8"></div>
+      <p>Procs have a "call" method that you use to call the method.</p>
+      <pre><code class="language-ruby">
 some_proc = proc { puts 'some test' }
 some_proc.call
-    </code></pre>
-    <div class="icon-lambda icon-sm mt-8"></div>
-    <p>Since lambdas are just types of procs, they have the same "call" method to call them.</p>
-    <pre><code class="language-ruby">
+      </code></pre>
+      <div class="icon-lambda icon-sm mt-8"></div>
+      <p>Since lambdas are just types of procs, they have the same "call" method to call them.</p>
+      <pre><code class="language-ruby">
 some_lambda = ->{ puts 'some test' }
 some_lambda.call
-    </code></pre>
-
-    <hr class="my-10">
+      </code></pre>
+    </a>
+<!--
+    <hr>
 
     <h3 class="text-2xl italic mb-4">Implicit Return?</h3>
 
@@ -182,7 +191,7 @@ some_lambda.call
 
     <hr class="my-10">
 
-    <h3 class="text-2xl italic mb-4">Loose Arguments</h3>
+    <h3 class="text-2xl italic mb-4">Loose Arguments</h3> -->
   </div>
 </body>
 </html>
