@@ -2,6 +2,10 @@
   background: hsla(219, 24%, 20%, 1);
 }
 
+pre[class*="language-"] {
+  padding: 0 1rem;
+}
+
 hr {
   border-color: hsla(219, 24%, 17%, 1);
 }
